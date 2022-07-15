@@ -2,7 +2,7 @@ import React from 'react';
 
 const Splash = () => {
   return (
-    <div>Splash change to test rebase</div>
+    <div>Splash change two to test rebase</div>
   );
 };
 
