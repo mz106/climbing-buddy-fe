@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 
+import Header from "./components/header/navbar/header/Header";
+
 function App() {
 
   const [ testState, setTestState ] = useState("");
@@ -15,6 +17,7 @@ function App() {
   
   return (
     <div>
+    <Header />
       <p>The following message is coming from the backend: "{testState}"</p>
     </div>
   );
