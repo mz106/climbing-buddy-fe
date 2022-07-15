@@ -6,14 +6,15 @@ function App() {
 
   useEffect(() => {
     (async () => {
+      console.lof("hello from useEffect")
       const response = await fetch(`${process.env.REACT_APP_BASE_URL}/test`);
+      console.log(response)
       const data = await response.json();
       await setTestState(data.message);
-      console.log(testState)
     })();
   // eslint-disable-next-line react-hooks/exhaustive-deps
   },[]);
-
+  
   return (
     <div>
       <p>The following message is coming from the backend: "{testState}"</p>
