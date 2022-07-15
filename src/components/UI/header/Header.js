@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 
-import Navbar from '../navbar/Navbar'
+import Navbar from './navbar/Navbar';
 
 const Header = () => {
   return (
@@ -9,7 +9,7 @@ const Header = () => {
         <Navbar />
     </>
     
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Routes, Route } from 'react-router-dom';
 
-import Header from "./components/header/navbar/header/Header";
+import Header from "./components/UI/header/Header";
 
 import LandingPage from "./pages/landingPage/LandingPage";
 

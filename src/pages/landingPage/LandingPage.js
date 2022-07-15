@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Splash from '../../components/landingPage/splash/Splash'
+import Splash from '../../components/UI/landingPage/splash/Splash'
 
 const LandingPage = () => {
   return (
