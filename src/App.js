@@ -7,7 +7,7 @@ function App() {
   useEffect(() => {
     (async () => {
       console.log("hello from useEffect")
-      const response = await fetch(`${process.env.REACT_APP_BASE_URL}/test`);
+      const response = await fetch(`${process.env.REACT_APP_BASE_URL}test`);
       console.log(response)
       const data = await response.json();
       await setTestState(data.message);
