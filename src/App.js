@@ -11,6 +11,7 @@ function App() {
       setTestState(data.message);
       console.log(testState)
     })();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   },[]);
 
   return (
