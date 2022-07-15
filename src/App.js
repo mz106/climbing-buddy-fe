@@ -8,7 +8,7 @@ function App() {
     (async () => {
       const response = await fetch(`${process.env.REACT_APP_BASE_URL}/test`);
       const data = await response.json();
-      setTestState(data.message);
+      await setTestState(data.message);
       console.log(testState)
     })();
   // eslint-disable-next-line react-hooks/exhaustive-deps
