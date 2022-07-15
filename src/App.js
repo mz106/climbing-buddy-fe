@@ -1,19 +1,22 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 function App() {
 
+  const [ testState, setTestState ] = useState("");
+
   useEffect(() => {
     (async () => {
-      const response = await fetch(`${process.env.REACT_APP_BASE_URL}`);
-      console.log(response)
+      const response = await fetch(`${process.env.REACT_APP_BASE_URL}/test`);
       const data = await response.json();
-      console.log(data);
+      setTestState(data.message);
+      console.log(testState)
     })();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   },[]);
 
   return (
     <div>
-      <p>Hello world</p>
+      <p>The following message is coming from the backend: "{testState}"</p>
     </div>
   );
 }
