@@ -6,7 +6,7 @@ const LandingPage = () => {
   return (
     <>
         <div>LandingPage</div>
-        <p>Hello from Deivydas</p>
+        <p>Hello from  happy Deivydas</p>
         <Splash />
     </>
   );
