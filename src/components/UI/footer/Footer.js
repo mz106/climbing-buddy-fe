@@ -1,4 +1,6 @@
 import React from 'react';
+import { FiTwitter, FiInstagram, FiYoutube } from 'react-icons/fi'
+import { AiOutlineLinkedin } from 'react-icons/ai'
 
 const Footer = () => {
   return (
@@ -24,7 +26,11 @@ const Footer = () => {
         <img src="" alt="Footer-logo" />
       </section>
       <section className='footer-socials'>
-
+        <h2>Follow Us</h2>
+          <FiTwitter />
+          <FiInstagram />
+          <FiYoutube />
+          <AiOutlineLinkedin />
       </section>
       <section className="footer-bottom">
         <i>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam perferendis porro ipsa magnam vitae deserunt natus perspiciatis illo eveniet quo quis labore repellat nostrum rem eaque quam, hic unde quibusdam?</i>
