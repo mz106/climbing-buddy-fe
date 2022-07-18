@@ -1,0 +1,50 @@
+.main-footer {
+    background-color: black;
+    color: aliceblue;
+    font-size: 1.3rem;
+    padding: 10px 10px;
+}
+
+    .footer-top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 10px;
+
+        .footer-navigation {
+            display: flex;
+            gap: 7px;
+
+            li {
+                margin-bottom: 8px;
+            }
+    
+            .vl {
+                border-left: 2px solid aliceblue;
+                min-height: 30px;
+            }
+        }
+
+        .footer-socials {
+            text-align: center;
+
+            svg {
+                padding: 10px;
+                font-size: 1.3em;
+            }
+        }
+    }
+
+    .footer-bottom {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .footer-contact {
+            text-align: center;
+        }
+        i {
+            align-self: center;
+        }
+    }

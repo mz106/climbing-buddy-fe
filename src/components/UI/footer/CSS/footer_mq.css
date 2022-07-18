@@ -1,0 +1,14 @@
+@media screen and (min-width: 800px) {
+    .main-footer {
+        font-size: 1.5rem;
+    }
+    
+    .footer-top {
+    flex-direction: row;
+    justify-content: space-around;
+    }
+    .footer-bottom {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}

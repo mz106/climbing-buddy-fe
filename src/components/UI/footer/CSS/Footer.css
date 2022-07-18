@@ -1,1 +1,44 @@
-/*# sourceMappingURL=Footer.css.map */
+.main-footer {
+  background-color: black;
+  color: aliceblue;
+  font-size: 1.3rem;
+  padding: 10px 10px;
+}
+
+.footer-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.footer-top .footer-navigation {
+  display: flex;
+  gap: 7px;
+}
+.footer-top .footer-navigation li {
+  margin-bottom: 8px;
+}
+.footer-top .footer-navigation .vl {
+  border-left: 2px solid aliceblue;
+  min-height: 30px;
+}
+.footer-top .footer-socials {
+  text-align: center;
+}
+.footer-top .footer-socials svg {
+  padding: 10px;
+  font-size: 1.3em;
+}
+
+.footer-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footer-bottom .footer-contact {
+  text-align: center;
+}
+.footer-bottom i {
+  align-self: center;
+}/*# sourceMappingURL=Footer.css.map */
