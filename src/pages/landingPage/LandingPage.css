@@ -1,0 +1,9 @@
+
+.landing-page-main{
+    
+    background-image: url("./Images/wallpaper.jpg") ;
+    background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+   height: 80vh;
+}
