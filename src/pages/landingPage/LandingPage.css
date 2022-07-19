@@ -1,9 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;1,300;1,400&display=swap');
+:root {
+    --persian-red: #C62C2C;
+    --imperial-red: #ED2938;
+    --dark-orange:#FF8C01;
+    --dark-charcoal:#333333;
+    --black: #000000;
+  }
+
 
 .landing-page-main{
-    
     background-image: url("./Images/wallpaper.jpg") ;
     background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-   height: 80vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+    display: grid;
+    grid-template-columns:  1.5fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+      ". content3 "
+      "content1 content3 "
+      "content2 content3 ";
 }
+
+.landing-page-button{
+    grid-area: content1;
+    background-color: var(--dark-charcoal);
+}
+.landing-page-title{
+    grid-area: content2;
+}
+.landing-page-text{
+    font-size: 22px;
+    color: var(--dark-orange);
+    padding: 40px;
+    grid-area: content3;
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+
+
+
+/* .landing-page-main:before{
+    content:"";
+    background: -webkit-linear-gradient(left, rgb(14, 7, 10) 0%, rgb(8, 7, 8) 57%, rgb(224, 61, 20) 58%, rgb(236, 62, 9) 100%);
+    display: block;
+    height:10px;
+    width: 100%;
+    position: absolute;
+    bottom: 50;
+} */
