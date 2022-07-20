@@ -12,13 +12,12 @@ background: -webkit-linear-gradient(to right, #010101, #d46c04);
 background: linear-gradient(to right, #010101, #c4640a); 
 
     height: 550px;
+    display: flex;
 }
 .landing-page-main{
 
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+margin: auto;
+
     background-image: url("./Images/wallpaper.jpg") ;
     background-position: center;
     background-repeat: no-repeat;
