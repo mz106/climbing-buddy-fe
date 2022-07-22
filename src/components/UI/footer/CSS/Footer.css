@@ -11,6 +11,7 @@
   align-items: center;
   gap: 10px;
   margin-bottom: 10px;
+  padding: 0 15px;
 }
 .footer-top .footer-navigation {
   display: flex;
@@ -41,4 +42,10 @@
 }
 .footer-bottom i {
   align-self: center;
+}
+.footer-bottom svg {
+  align-self: flex-end;
+}
+.footer-bottom svg:hover {
+  color: rgb(192, 192, 192);
 }/*# sourceMappingURL=Footer.css.map */

@@ -1,8 +1,9 @@
 import React from 'react';
-import './CSS/Footer.css'
-import './CSS/footer_mq.css'
-import { FiTwitter, FiInstagram, FiYoutube } from 'react-icons/fi'
-import { AiOutlineLinkedin } from 'react-icons/ai'
+import './CSS/Footer.css';
+import './CSS/footer_mq.css';
+import { FiTwitter, FiInstagram, FiYoutube } from 'react-icons/fi';
+import { AiOutlineLinkedin } from 'react-icons/ai';
+import { BsArrowUpCircle } from 'react-icons/bs';
 
 const Footer = () => {
   return (
@@ -47,6 +48,9 @@ const Footer = () => {
         </div>
         <i>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</i>
         {/* Some legal text and links here */}
+
+        {/* Back to top icon */}
+        <BsArrowUpCircle size={50}/>
       </section>
     </footer>
   );
