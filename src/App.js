@@ -22,11 +22,12 @@ function App() {
   return (
     <div>
     <Header />
-      <p>The following message is coming from the backend: "{testState}"</p>
+     
       <Routes>
         <Route path="/" element={<LandingPage />} />
       </Routes>
       <Footer />
+      <p>The following message is coming from the backend: "{testState}"</p>
     </div>
   );
 }
