@@ -1,0 +1,1 @@
+https://www.figma.com/file/NwXlcotbavq6vJyrFZ6H25/Climb-buddy--footer-design?node-id=0%3A1
