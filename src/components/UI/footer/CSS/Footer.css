@@ -1,28 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;1,300;1,400&display=swap");
 .main-footer {
-  background-color: black;
+  background-color: #010101;
   color: aliceblue;
   font-size: 1.3rem;
   padding: 10px 10px;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 .footer-top {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 10px;
-  padding: 0 15px;
+  gap: 50px;
+  margin-bottom: 50px;
 }
 .footer-top .footer-navigation {
   display: flex;
   gap: 7px;
 }
 .footer-top .footer-navigation li {
-  margin-bottom: 8px;
+  margin-bottom: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.footer-top .footer-navigation li:hover {
+  color: #ff8c01;
 }
 .footer-top .footer-navigation .vl {
-  border-left: 2px solid aliceblue;
-  min-height: 30px;
+  border-left: 2px solid #ff8c01;
+  height: 120px;
 }
 .footer-top .footer-socials {
   text-align: center;
@@ -30,22 +36,62 @@
 .footer-top .footer-socials svg {
   padding: 10px;
   font-size: 1.3em;
+  cursor: pointer;
 }
 
 .footer-bottom {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  align-items: center;
 }
 .footer-bottom .footer-contact {
   text-align: center;
 }
 .footer-bottom i {
   align-self: center;
+  color: #ff8c01;
 }
-.footer-bottom svg {
+.footer-bottom .back-to-top-icon {
   align-self: flex-end;
+  cursor: pointer;
+  transition: 0.3s;
 }
-.footer-bottom svg:hover {
-  color: rgb(192, 192, 192);
+.footer-bottom .back-to-top-icon:hover {
+  color: #ff8c01;
+}
+
+@media screen and (min-width: 800px) {
+  .main-footer {
+    font-size: 1.5rem;
+  }
+  .footer-top {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .footer-top .footer-navigation li {
+    margin-bottom: 10px;
+  }
+  .footer-top .footer-navigation .vl {
+    height: 90px;
+  }
+  .footer-top .footer-logo, .footer-top .footer-socials {
+    align-self: center;
+  }
+  .footer-bottom {
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0 100px;
+  }
+  .footer-bottom .footer-contact {
+    text-align: left;
+  }
+}
+@media screen and (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }/*# sourceMappingURL=Footer.css.map */
