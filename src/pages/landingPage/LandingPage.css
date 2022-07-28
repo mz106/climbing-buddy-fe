@@ -9,7 +9,7 @@
 
 .landing-page-background{
 background: -webkit-linear-gradient(to right, #010101, #d46c04); 
-background: linear-gradient(to right, #010101, #c4640a); 
+background:  #c4640ae8; 
 
     height: 550px;
     display: flex;

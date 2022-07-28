@@ -7,20 +7,29 @@
   }
   
 .Navbar{
-    background-color: rgb(0, 1, 1);
+    background-color: rgb(65, 200, 200);
     border-bottom: 5px solid white;
     height: 80px;
     display: flex;
     justify-content:space-around;
     
 }  
-
+/* rgb(110, 191, 191); */
 .white{
     color: white;
     font-size: 15px;
     font-family: 'Josefin Sans', sans-serif;
+    border: solid white 2px;
+    padding: 3.5px 6px 2px 6px  ;
+    border-radius: 5px;
+    cursor: pointer;
+    text-shadow: 1px 1px #0d0808;
+    box-shadow:1px 1px #0d0808 ;
 }
+.white:hover{
+background-color: orange;
 
+}
 .Navbar-list{
     list-style-type: none;
     display: flex;
@@ -38,9 +47,9 @@ width: 1000px;
 }
 .Navbar-login{
     position: relative;
-    left: 140px;
+    left: 120px;
 }
 .Navbar-home{
     position: relative;
-    right: 140px;
+    right: 120px;
 }
