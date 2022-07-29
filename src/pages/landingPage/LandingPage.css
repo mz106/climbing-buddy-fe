@@ -9,7 +9,7 @@
 
 .landing-page-background{
 background: -webkit-linear-gradient(to right, #010101, #d46c04); 
-background:  #c4640ae8; 
+background:  rgba(65, 230, 230, 0.387); 
 
     height: 550px;
     display: flex;
@@ -30,8 +30,8 @@ background:  #c4640ae8;
       "content2 content3 ";
       min-width: 1000px;
       max-width: 1000px;
-      border-right: 5px solid rgb(252, 252, 252);
-      border-left: 5px solid rgb(252, 252, 252);
+      border-right: 2px solid rgb(252, 252, 252);
+      border-left: 2px solid rgb(252, 252, 252);
    
 }
 

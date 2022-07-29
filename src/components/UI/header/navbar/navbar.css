@@ -8,48 +8,94 @@
   
 .Navbar{
     background-color: rgb(65, 200, 200);
-    border-bottom: 5px solid white;
-    height: 80px;
+    border-bottom: 2px solid white;
+    height: 75px;
     display: flex;
     justify-content:space-around;
     
 }  
+
+.Navbar-inner{
+    background-color: rgba(210, 115, 31, 0);
+    width: 1000px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+      "nav nav nav ";
+    grid-gap: 0.2rem;
+    }
 /* rgb(110, 191, 191); */
-.white{
+.btn{
     color: white;
-    font-size: 15px;
+    font-size: 17px;
     font-family: 'Josefin Sans', sans-serif;
     border: solid white 2px;
     padding: 3.5px 6px 2px 6px  ;
     border-radius: 5px;
     cursor: pointer;
     text-shadow: 1px 1px #0d0808;
-    box-shadow:1px 1px #0d0808 ;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    background: rgb(72, 224, 224);
 }
-.white:hover{
-background-color: orange;
+.btn:hover{
+background-color: rgb(205, 135, 5);
 
 }
-.Navbar-list{
-    list-style-type: none;
+.Navbar-flex{
+    justify-self: center;
     display: flex;
     align-items:center;
-    justify-content:space-around;
+gap: 10px;
+   
 }
-
+.Login-register-btns{
+    padding-left: 80px;
+}
 .Navbar-logo{
-    border-radius: white solid 2px;
+    justify-self: center;
 }
 
-.Navbar-inner{
-background-color: rgba(210, 115, 31, 0);
-width: 1000px;
-}
 .Navbar-login{
-    position: relative;
-    left: 120px;
+
 }
 .Navbar-home{
-    position: relative;
-    right: 120px;
+
 }
+
+@media only screen and (max-width: 1024px) {
+    .Navbar-inner {
+  
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    .Login-register-btns{
+      
+        padding-left: 0;
+         margin-right: 55px;
+     }
+  }
+  @media only screen and (max-width: 425px) {
+
+    .Navbar-inner {
+  gap: 25px;
+    }
+  }
+  @media only screen and (max-width: 375px) {
+    .Login-register-btns{
+      
+       padding-left: 0;
+        margin-right: 55px;
+    }
+    .Navbar-logo{
+        padding: auto;
+    }
+  }
+
+  @media only screen and (max-width: 320px) {
+    .Navbar-inner {
+        margin-left: 45px;
+  gap:0px;
+    }
+  }
