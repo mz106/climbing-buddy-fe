@@ -14,17 +14,17 @@ const Footer = () => {
         <div className='footer-navigation'>
           <nav>
             <ul>
-              <li>About</li>
-              <li>Events</li>
-              <li>News</li>
+              <li>Page 1</li>
+              <li>Page 2</li>
+              <li>Page 3</li>
             </ul>
           </nav>
           <div className="vl"></div>
           <nav>
             <ul>
-              <li>Routes</li>
-              <li>Community</li>
-              <li>Get Started</li>
+              <li>Page 4</li>
+              <li>Page 5</li>
+              <li>Page 6</li>
             </ul>
           </nav> 
         </div>
