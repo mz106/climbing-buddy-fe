@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;1,300;1,400&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -5,19 +6,39 @@
 }
 
 .nav-container {
-  min-height: 80px;
-  padding: 0 2rem;
-  background-color: #292929;
+  padding: 2rem 2rem;
+  background-color: #41C8C8;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  min-width: 100%;
+}
+.nav-container .nav-desktop {
+  display: flex;
   align-items: center;
 }
 .nav-container .nav-logo {
   z-index: 1;
+  margin: 0 30px;
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
 }
 .nav-container .ul-desktop {
   display: flex;
-  gap: 20px;
+  gap: 3.125rem;
+}
+.nav-container .ul-desktop button {
+  min-width: 100px;
+  background-color: #41C8C8;
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 7px 0;
+  box-shadow: 2px 2px 5px 3px rgba(0, 0, 0, 0.247);
+  transition: 0.3s;
+  cursor: pointer;
+}
+.nav-container .ul-desktop button:hover, .nav-container .ul-desktop button:active {
+  background-color: #CD8705;
 }
 .nav-container ul li {
   list-style-type: none;
@@ -25,11 +46,15 @@
 .nav-container a {
   text-decoration: none;
   color: whitesmoke;
+  font-family: "Josefin Sans", sans-serif;
 }
 .nav-container .nav-menu-btn {
   display: none;
   color: white;
   z-index: 1;
+  margin: auto;
+  margin-right: 30px;
+  cursor: pointer;
 }
 .nav-container .nav-btn {
   padding: 5px;
@@ -40,10 +65,11 @@
 .nav-container .nav-mobile {
   position: fixed;
   right: 0;
-  top: 50px;
-  width: 50%;
-  background-color: #292929;
+  top: 80px;
+  width: 40%;
+  background-color: #41C8C8;
   transition: 0.3s ease-in-out;
+  border-radius: 5px;
 }
 .nav-container .nav-mobile-hidden {
   position: fixed;
@@ -52,9 +78,33 @@
   transition: 0.3s ease-in-out;
 }
 .nav-container .ul-mobile {
-  padding: 50px 0 10px 10px;
+  padding: 100px 20px 10px 10px;
+}
+.nav-container .ul-mobile li {
+  margin-bottom: 50px;
+}
+.nav-container .ul-mobile li a {
+  color: black;
 }
 
+@media screen and (max-width: 1470px) {
+  .nav-container .ul-desktop {
+    gap: 2rem;
+  }
+  .nav-container .nav-logo {
+    margin: 0 20px;
+  }
+}
+@media screen and (max-width: 1190px) {
+  .nav-container .nav-logo {
+    margin: 0;
+  }
+}
+@media screen and (max-width: 980px) {
+  .nav-container .ul-desktop {
+    gap: 1.5rem;
+  }
+}
 @media screen and (max-width: 900px) {
   .nav-container .ul-desktop {
     display: none;
