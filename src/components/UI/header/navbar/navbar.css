@@ -22,9 +22,21 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
     grid-template-areas:
-      "nav nav nav ";
+      ". content1 content3 ";
     grid-gap: 0.2rem;
     }
+
+    .Navbar-inner-logout{
+        background-color: rgba(210, 115, 31, 0);
+        width: 1000px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+          ". content1 content3 ";
+        grid-gap: 0.2rem;
+        }   
+
 /* rgb(110, 191, 191); */
 .btn{
     color: white;
@@ -37,6 +49,8 @@
     text-shadow: 1px 1px #0d0808;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
     background: #48e0e0;
+
+
 }
 .btn:hover{
 background-color: #cd8705;
@@ -47,56 +61,84 @@ transition: ease 0.5s;
     justify-self: center;
     display: flex;
     align-items:center;
-gap: 10px;
+gap: 15px;
    
 }
-.Login-register-btns{
+.Login-register-btns-logout{
     padding-left: 80px;
+    grid-area: content3;
 }
 .Navbar-logo{
     justify-self: center;
+    grid-area: content1;
 }
 
-.Navbar-login{
-
-}
-.Navbar-home{
-
-}
 
 @media only screen and (max-width: 1024px) {
-    .Navbar-inner {
-  
-    }
+    .Navbar-inner-logout{
+        background-color: rgba(210, 115, 31, 0);
+        width: 800px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+          " . content1 content3 ";
+        
+        }  
+
+
   }
 
   @media only screen and (max-width: 768px) {
-    .Login-register-btns{
-      
-        padding-left: 0;
-         margin-right: 55px;
-     }
+    .Navbar-inner-logout{
+        background-color: rgba(210, 115, 31, 0);
+        width: 550px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+          " . content1 content3 ";
+        
+        }  
+
   }
   @media only screen and (max-width: 425px) {
-
-    .Navbar-inner {
-  gap: 25px;
-    }
+    .Navbar-inner-logout{
+        background-color: rgba(210, 115, 31, 0);
+        width: 320px;
+        display: grid;
+        grid-template-columns:  160px 160px;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+          " content1 content3 ";
+        
+        }  
+        .Navbar-logo{
+padding-left: 0px;
+        }
+        .Login-register-btns-logout{
+            padding-right: 120px;
+        }
   }
   @media only screen and (max-width: 375px) {
-    .Login-register-btns{
-      
-       padding-left: 0;
-        margin-right: 55px;
-    }
-    .Navbar-logo{
-        padding: auto;
-    }
+
   }
 
   @media only screen and (max-width: 320px) {
-    .Navbar-inner {
-        margin-left: 45px;
-  gap:0px;
-    }
+    .Navbar-inner-logout{
+        background-color: rgba(210, 115, 31, 0);
+        width: 320px;
+        display: grid;
+        grid-template-columns:  160px 160px;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+          " content1 content3 ";
+        
+        }  
+        .Navbar-logo{
+padding-left: 00px;
+        }
+        .Login-register-btns-logout{
+            padding-right: 170px;
+        }
   }
