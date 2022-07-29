@@ -1,6 +1,10 @@
 import { useEffect, useState } from "react";
+import { Routes, Route } from 'react-router-dom';
 
-import Header from "./components/header/navbar/header/Header";
+import Header from "./components/UI/header/Header";
+import Footer from "./components/UI/footer/Footer";
+
+import LandingPage from "./pages/landingPage/LandingPage";
 
 function App() {
 
@@ -19,6 +23,10 @@ function App() {
     <div>
     <Header />
       <p>The following message is coming from the backend: "{testState}"</p>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+      </Routes>
+      <Footer />
     </div>
   );
 }
