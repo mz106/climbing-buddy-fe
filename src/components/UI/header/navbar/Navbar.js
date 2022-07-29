@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import "./navbar.css"
-import logo from "./logo.png"
+import logo from "./Images/logo.png"
 const Navbar = () => {
 
   const [navBarSwich, setNavBarSwich] = useState (false)

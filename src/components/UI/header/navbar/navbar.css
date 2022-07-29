@@ -7,7 +7,7 @@
   }
   
 .Navbar{
-    background-color: rgb(65, 200, 200);
+    background-color: #41c8c8;
     border-bottom: 2px solid white;
     height: 75px;
     display: flex;
@@ -36,10 +36,11 @@
     cursor: pointer;
     text-shadow: 1px 1px #0d0808;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-    background: rgb(72, 224, 224);
+    background: #48e0e0;
 }
 .btn:hover{
-background-color: rgb(205, 135, 5);
+background-color: #cd8705;
+transition: ease 0.5s;
 
 }
 .Navbar-flex{
