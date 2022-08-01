@@ -16,16 +16,40 @@
 }  
 
 .Navbar-inner{
-    background-color: rgba(210, 115, 31, 0);
     width: 1000px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr 0.5fr;
     grid-template-rows: 1fr;
     grid-template-areas:
-      ". content1 content3 ";
-    grid-gap: 0.2rem;
+      "content1 content2 content3 content4 content5 ";
+    
     }
+    .Navbar-home-icon{
+      grid-area: content1;
+      justify-self: center;
+      align-self: center;
+    }
+.left-content{
+  grid-area: content2;
+ 
+}
 
+.center-content{
+  grid-area: content3;
+  justify-self: center;
+    }
+.right-content{
+  grid-area: content4;
+}
+.Navbar-blank-pic{
+  border-radius: 50%;
+  grid-area: content5;
+  justify-self: center;
+  align-self: center;
+}
+.Navbar-burger-menu{
+  display: none;
+}
     .Navbar-inner-logout{
         background-color: rgba(210, 115, 31, 0);
         width: 1000px;
@@ -68,11 +92,13 @@ gap: 15px;
     padding-left: 80px;
     grid-area: content3;
 }
-.Navbar-logo{
-    justify-self: center;
-    grid-area: content1;
-}
 
+
+
+.Navbar-logo-logout{
+  grid-area: content1;
+  justify-self: center;
+}
 
 @media only screen and (max-width: 1024px) {
     .Navbar-inner-logout{
@@ -113,15 +139,87 @@ gap: 15px;
           " content1 content3 ";
         
         }  
-        .Navbar-logo{
+        .Navbar-logo-logout{
 padding-left: 0px;
         }
         .Login-register-btns-logout{
             padding-right: 120px;
         }
-  }
-  @media only screen and (max-width: 375px) {
+        .Navbar-inner{
+       
+          width: 300px;
+          display: grid;
+          grid-template-columns:  1fr 1fr 1fr;
+          grid-template-rows: 1fr;
+          grid-template-areas:
+            "content1 content2 content3 ";
+           
+          }
 
+    .Navbar-burger-menu{
+      display: inline;
+    }
+
+.left-content{
+  display: none;
+}
+.right-content{
+  display: none;
+}
+.center-content{
+  grid-area: content2;
+  place-self: center;
+}
+.Navbar-home-icon{
+  grid-area: content1;
+}
+.Navbar-burger-menu{
+  grid-area: content3;
+  place-self: center;
+}
+.Navbar-blank-pic{
+  display:none;
+}
+
+  }
+  @media only screen and (min-width: 320px) {
+
+
+    .Navbar-inner{
+
+      width: 350px;
+      display: grid;
+      grid-template-columns:  1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+      grid-template-areas:
+        "content1 content2 content3 ";
+       
+      }
+
+.left-content{
+display: none;
+}
+.right-content{
+display: none;
+}
+.center-content{
+grid-area: content2;
+place-self: center;
+}
+.Navbar-home-icon{
+grid-area: content1;
+justify-self: center;
+
+}
+.Navbar-burger-menu{
+grid-area: content3;
+place-self: center;
+display: inline;
+
+}
+.Navbar-blank-pic{
+display:none;
+}
   }
 
   @media only screen and (max-width: 320px) {
@@ -135,10 +233,45 @@ padding-left: 0px;
           " content1 content3 ";
         
         }  
-        .Navbar-logo{
+        .Navbar-logo-logout{
 padding-left: 00px;
         }
         .Login-register-btns-logout{
             padding-right: 170px;
         }
+
+        .Navbar-inner{
+          width: 300px;
+          display: grid;
+          grid-template-columns:  1fr 0.2fr 1fr;
+          grid-template-rows: 1fr;
+          grid-template-areas:
+            "content1 content2 content3 ";
+           
+          }
+
+.left-content{
+  display: none;
+}
+.right-content{
+  display: none;
+}
+.center-content{
+  grid-area: content2;
+  place-self: center;
+}
+.Navbar-home-icon{
+  grid-area: content1;
+  justify-self: center;
+
+}
+.Navbar-burger-menu{
+  grid-area: content3;
+  place-self: center;
+  display: inline;
+  
+}
+.Navbar-blank-pic{
+  display:none;
+}
   }
