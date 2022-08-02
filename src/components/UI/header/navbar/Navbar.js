@@ -6,7 +6,8 @@ import blankProfile from "./Images/blank.png"
 import burgerBar from "./Images/burger-bar.png"
 const Navbar = () => {
 
-  const [navBarSwich, setNavBarSwich] = useState (true)
+  // const [navBarSwich, setNavBarSwich] = useState (true)
+const navBarSwich = false;
 
   return (
     <div className='Navbar'>
