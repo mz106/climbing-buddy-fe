@@ -9,20 +9,18 @@
 
 .landing-page-background{
 background: -webkit-linear-gradient(to right, #010101, #d46c04); 
-background: linear-gradient(to right, #010101, #c4640a); 
+background:  rgba(65, 230, 230, 0.387); 
 
     height: 550px;
     display: flex;
 }
 .landing-page-main{
-
-margin: auto;
-
+    margin: auto;
     background-image: url("./Images/wallpaper.jpg") ;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 500px;
+    height:550px;
     display: grid;
     grid-template-columns:  1.5fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
@@ -30,30 +28,30 @@ margin: auto;
       ". content3 "
       "content1 content3 "
       "content2 content3 ";
-      min-width: 1000px;
-      max-width: 1000px;
-      border: 5px solid rgb(252, 252, 252);
-      border-radius: 5px;
+    min-width: 1000px;
+    max-width: 1000px;
+    border-right: 2px solid rgb(252, 252, 252);
+    border-left: 2px solid rgb(252, 252, 252);
+   
 }
 
 .landing-page-button{
    
-    grid-area: content2;
-    background-color:rgba(255, 255, 255, 0);
-    height: 45px;
-    width: 220px;
-    justify-self: center;
-    border: rgb(254, 252, 252) solid 3px;
-    border-radius:5px;
-    color: white;
-    align-self: start;
-    font-size: 22px;
-    text-shadow: 2px 2px #020202;
-  
+  grid-area: content2;
+  background-color:rgba(255, 255, 255, 0);
+  height: 45px;
+  width: 220px;
+  justify-self: center;
+  border: rgb(254, 252, 252) solid 3px;
+  border-radius:5px;
+  color: white;
+  align-self: start;
+  font-size: 22px;
+  text-shadow: 2px 2px #020202;
   transition: ease 1s;
   cursor: pointer;
-    font-family: 'Josefin Sans', sans-serif;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  font-family: 'Josefin Sans', sans-serif;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 .landing-page-title{
     grid-area: content1;
@@ -87,7 +85,6 @@ margin: auto;
     
     }
   }
-
 
   .landing-page-button:hover{
     opacity: 1;
