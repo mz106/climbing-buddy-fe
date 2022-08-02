@@ -8,7 +8,9 @@ const LandingPage = () => {
       
         <button className='landing-page-button'>Find your buddy</button>
         <h1 className='landing-page-title'>Climbing buddy</h1>
-        <p className='landing-page-text'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt tempora veritatis est recusandae </p>
+        <p className='landing-page-text'>“Climbing is often group activity and it’s always inspiring to see how other people, who share your passions, do things.”
+
+<span> - Fred Nicole</span></p>
     </div>
     </div>
   );
