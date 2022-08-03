@@ -50,15 +50,23 @@
 .Navbar-blank-pic{
   border-radius: 50%;
   grid-area: content5;
-  justify-self: center;
   align-self: center;
 }
+
 
 .dropdown-btns {
   margin: auto;
   z-index: 20;
   cursor: pointer;
   display: none;
+}
+
+.Navbar-blank-pic.mobile {
+  display: inline;
+  align-self: center;
+  position: relative;
+  left: 47px;
+  top: 10px;
 }
 
 .Navbar-burger-menu{
@@ -79,17 +87,23 @@
   z-index: 1;
 }
 
+.Navbar-inner .nav-dropdown .ul-dropdown {
+  position: relative;
+  top: 35px;
+}
+
 .Navbar-inner .nav-dropdown-hidden {
   position: fixed;
   left: 100%;
 }
 
 .Navbar-inner .nav-dropdown .btn {
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
   width: 150px;
   height: 50px;
   color: rgb(0, 0, 0);
   border: 0;
+  font-size: 2rem;
 }
 
 .Navbar-inner .nav-dropdown ul li,
@@ -208,9 +222,10 @@ transition: ease 0.5s;
         .Navbar-blank-pic{
           display:none;
         }
-        .dropdown-btns {
+        .dropdown-btns, .Navbar-blank-pic.mobile {
           display: inline;
         }
+
 
   }
   /* @media (min-width:376px) and (max-width:425px) {

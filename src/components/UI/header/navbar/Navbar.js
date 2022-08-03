@@ -11,7 +11,7 @@ import { useState } from "react"
 const Navbar = () => {
 
 // const [navBarSwich, setNavBarSwich] = useState (true)
-const navBarSwich = true;
+const navBarSwich = false;
 
 // useState for toggling mobile dropdown
 const [dropdown, setDropdown] = useState(false);
@@ -44,9 +44,9 @@ const handleDropdown = () => {
       <div onClick={handleDropdown} className="dropdown-btns">
         {/* If dropdown is hidden: show burger icon. X icon when the dropdown is visible */}
       {!dropdown ?
-        <img className='Navbar-burger-menu' src={burgerBar} alt="burger bar" height={25}  />
+        <img className='Navbar-burger-menu' src={burgerBar} alt="burger bar" height={33}  />
         :
-        <img src={closeDropdown} alt="x icon" height={22} />
+        <img src={closeDropdown} alt="x icon" height={28} />
       }
       </div>
       <img className='Navbar-blank-pic' src={blankProfile} alt="" height={40}/>
@@ -58,6 +58,7 @@ const handleDropdown = () => {
           <li><button className=" btn">Page 4</button></li>
           <li><button className=" btn">Page 5</button></li>
           <li><button className=" btn">Page 6</button></li>
+          <img className='Navbar-blank-pic mobile' src={blankProfile} alt="" height={50}/>
         </ul>
       </nav>
     </div>
