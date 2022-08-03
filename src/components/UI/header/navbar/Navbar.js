@@ -1,14 +1,16 @@
-import React from 'react'
+import React, {useState} from 'react'
 import "./navbar.css"
 import logo from "./Images/logo.png"
 import homeIcon from "./Images/home.png"
 import blankProfile from "./Images/blank.png"
 import burgerBar from "./Images/burger-bar.png"
+import SignOrLogin from '../../signOrLogin/SignOrLogin'
+
 const Navbar = () => {
 
   // const [navBarSwich, setNavBarSwich] = useState (true)
 const navBarSwich = false;
-
+const [loginToggle, setLoginToggle]= useState (false)
   return (
     <div className='Navbar'>
      
@@ -38,11 +40,12 @@ const navBarSwich = false;
      <div className='Navbar-inner-logout'>      
       <img className='Navbar-logo-logout' src={logo} alt="logo" height={70} />
      <div className='Navbar-flex Login-register-btns-logout'>
-    <button className=' btn'>Login</button>
+    <button className=' btn' onClick={()=>setLoginToggle(!loginToggle)} >Login</button>
     <button className=' btn'>Register</button>
     </div>
     </div>} 
-
+    {loginToggle ? <SignOrLogin loginToggle={loginToggle} setLoginToggle={setLoginToggle}/> : ""}
+   
     </div>
    
    
