@@ -50,6 +50,8 @@ const handleDropdown = () => {
       }
       </div>
       <img className='Navbar-blank-pic' src={blankProfile} alt="" height={40}/>
+      
+      {/* If dropdown is false, hide it. Else, show it */}
       <nav className={!dropdown ? 'nav-dropdown-hidden' : 'nav-dropdown'}>
         <ul className="ul-dropdown">
           <li><button className=" btn">Page 1</button></li>
