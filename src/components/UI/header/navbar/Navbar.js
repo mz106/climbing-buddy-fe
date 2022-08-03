@@ -11,14 +11,14 @@ const navBarSwich = false;
 
   return (
     <div className='Navbar'>
-     
+
       
-   {navBarSwich ? 
+  {navBarSwich ? 
 
    //Logged in navbar
-   <div className='Navbar-inner'>
-   
-     <img className='Navbar-home-icon' src={homeIcon} alt="" height={25}/>
+  <div className='Navbar-inner'>
+
+    <img className='Navbar-home-icon' src={homeIcon} alt="" height={25}/>
     <div className='Navbar-flex left-content'>
       <button className=' btn'>Page 1</button>
       <button className=' btn'>Page 2</button>
@@ -35,19 +35,15 @@ const navBarSwich = false;
 
     </div> :
      //Logged out navbar
-     <div className='Navbar-inner-logout'>      
+    <div className='Navbar-inner-logout'>      
       <img className='Navbar-logo-logout' src={logo} alt="logo" height={70} />
-     <div className='Navbar-flex Login-register-btns-logout'>
+    <div className='Navbar-flex Login-register-btns-logout'>
     <button className=' btn'>Login</button>
     <button className=' btn'>Register</button>
     </div>
     </div>} 
 
     </div>
-   
-   
-   
- 
   )
 }
 
