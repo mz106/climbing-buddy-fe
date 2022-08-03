@@ -1,13 +1,25 @@
-import React from 'react'
 import "./navbar.css"
 import logo from "./Images/logo.png"
 import homeIcon from "./Images/home.png"
 import blankProfile from "./Images/blank.png"
 import burgerBar from "./Images/burger-bar.png"
+import closeDropdown from "./Images/close-x.png"
+
+import { useState } from "react"
+
+
 const Navbar = () => {
 
-  // const [navBarSwich, setNavBarSwich] = useState (true)
-const navBarSwich = false;
+// const [navBarSwich, setNavBarSwich] = useState (true)
+const navBarSwich = true;
+
+// useState for toggling mobile dropdown
+const [dropdown, setDropdown] = useState(false);
+
+//dropdown toggle function
+const handleDropdown = () => {
+  setDropdown(!dropdown);
+};
 
   return (
     <div className='Navbar'>
@@ -17,7 +29,6 @@ const navBarSwich = false;
 
    //Logged in navbar
   <div className='Navbar-inner'>
-
     <img className='Navbar-home-icon' src={homeIcon} alt="" height={25}/>
     <div className='Navbar-flex left-content'>
       <button className=' btn'>Page 1</button>
@@ -30,7 +41,14 @@ const navBarSwich = false;
       <button className=' btn'>Page 5</button>
       <button className=' btn'>Page 6</button>
       </div>
-      <img  className='Navbar-burger-menu' src={burgerBar} alt="burger bar" height={25}  />
+      <div onClick={handleDropdown} className="dropdown-btns">
+        {/* If dropdown is hidden: show burger icon. X icon when the dropdown is visible */}
+      {!dropdown ?
+        <img className='Navbar-burger-menu' src={burgerBar} alt="burger bar" height={25}  />
+        :
+        <img src={closeDropdown} alt="x icon" height={22} />
+      }
+      </div>
       <img className='Navbar-blank-pic' src={blankProfile} alt="" height={40}/>
 
     </div> :
@@ -42,7 +60,6 @@ const navBarSwich = false;
     <button className=' btn'>Register</button>
     </div>
     </div>} 
-
     </div>
   )
 }

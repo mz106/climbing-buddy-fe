@@ -47,12 +47,18 @@
   justify-self: center;
   align-self: center;
 }
+
+.dropdown-btns {
+  margin: auto;
+}
+
 .Navbar-burger-menu{
   display: none;
+  cursor: pointer;
 }
     .Navbar-inner-logout{
         background-color: rgba(210, 115, 31, 0);
-        width: 1000px;
+        width: 100%;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr;
@@ -67,7 +73,7 @@
     font-size: 17px;
     font-family: 'Josefin Sans', sans-serif;
     border: solid white 2px;
-    padding: 3.5px 6px 2px 6px  ;
+    padding: 3px;
     border-radius: 5px;
     cursor: pointer;
     text-shadow: 1px 1px #0d0808;
@@ -85,11 +91,11 @@ transition: ease 0.5s;
     justify-self: center;
     display: flex;
     align-items:center;
-gap: 15px;
-   
+    gap: 15px;
 }
 .Login-register-btns-logout{
     padding-left: 80px;
+    padding-right: 40px;
     grid-area: content3;
 }
 
@@ -120,19 +126,53 @@ gap: 15px;
   }
 
   @media only screen and (max-width: 768px) {
+
     .Navbar-inner-logout{
         background-color: rgba(210, 115, 31, 0);
-        width: 550px;
+        justify-content: center;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr;
         grid-template-areas:
           " . content1 content3 ";
-        
-        }  
+        }
+
+        .Navbar-inner{
+          margin-right: -25px;
+          display: grid;
+          justify-content: space-around;
+          grid-template-columns:  100px 100px 100px;
+          grid-template-rows: 1fr;
+          grid-template-areas:
+            "content1 content2 content3 ";
+          }
+
+        .Navbar-burger-menu{
+          display: inline;
+          grid-area: content3;
+          place-self: center;
+        }
+
+        .left-content{
+          display: none;
+        }
+        .right-content{
+          display: none;
+        }
+
+        .center-content{
+          grid-area: content2;
+          place-self: center;
+        }
+        .Navbar-home-icon{
+          grid-area: content1;
+        }
+        .Navbar-blank-pic{
+          display:none;
+        }
 
   }
-  @media (min-width:376px) and (max-width:425px) {
+  /* @media (min-width:376px) and (max-width:425px) {
     .Navbar-inner-logout{
         background-color: rgba(210, 115, 31, 0);
         width: 320px;
@@ -144,24 +184,25 @@ gap: 15px;
         
         }  
         .Navbar-logo-logout{
-padding-left: 0px;
+          padding-left: 0px;
         }
         .Login-register-btns-logout{
             padding-right: 120px;
         }
         .Navbar-inner{
-       margin-right: -25px;
+          margin-right: -25px;
           width: 425px;
           display: grid;
           grid-template-columns:  100px 100px 100px;
           grid-template-rows: 1fr;
           grid-template-areas:
             "content1 content2 content3 ";
-           
           }
 
     .Navbar-burger-menu{
       display: inline;
+      grid-area: content3;
+      place-self: center;
     }
 
 .left-content{
@@ -177,10 +218,6 @@ padding-left: 0px;
 .Navbar-home-icon{
   grid-area: content1;
 }
-.Navbar-burger-menu{
-  grid-area: content3;
-  place-self: center;
-}
 .Navbar-blank-pic{
   display:none;
 }
@@ -190,14 +227,13 @@ padding-left: 0px;
 
 
     .Navbar-inner{
-margin-left: -60px;
+      margin-left: -60px;
       width: 320px;
       display: grid;
       grid-template-columns:  1fr 1fr 1fr;
       grid-template-rows: 1fr;
       grid-template-areas:
         "content1 content2 content3 ";
-       
       }
 
 .left-content{
@@ -285,4 +321,4 @@ padding-left: 00px;
 .Navbar-blank-pic{
   display:none;
 }
-  }
+  } */
