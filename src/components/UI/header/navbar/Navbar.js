@@ -50,8 +50,19 @@ const handleDropdown = () => {
       }
       </div>
       <img className='Navbar-blank-pic' src={blankProfile} alt="" height={40}/>
+      <nav className={!dropdown ? 'nav-dropdown-hidden' : 'nav-dropdown'}>
+        <ul className="ul-dropdown">
+          <li><button className=" btn">Page 1</button></li>
+          <li><button className=" btn">Page 2</button></li>
+          <li><button className=" btn">Page 3</button></li>
+          <li><button className=" btn">Page 4</button></li>
+          <li><button className=" btn">Page 5</button></li>
+          <li><button className=" btn">Page 6</button></li>
+        </ul>
+      </nav>
+    </div>
 
-    </div> :
+    :
      //Logged out navbar
     <div className='Navbar-inner-logout'>      
       <img className='Navbar-logo-logout' src={logo} alt="logo" height={70} />

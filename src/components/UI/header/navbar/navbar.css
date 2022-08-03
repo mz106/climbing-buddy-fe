@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
   }
+
   
 .Navbar{
     background-color: #41c8c8;
@@ -12,7 +13,7 @@
     height: 75px;
     display: flex;
     justify-content:space-around;
-    
+    z-index: 99;
 }  
 
 .Navbar-inner{
@@ -22,25 +23,30 @@
     grid-template-rows: 1fr;
     grid-template-areas:
       "content1 content2 content3 content4 content5 ";
-    
+    z-index: 15;
     }
+
     .Navbar-home-icon{
       grid-area: content1;
       justify-self: center;
       align-self: center;
+      z-index: 20;
     }
-.left-content{
-  grid-area: content2;
- 
-}
+
+    .left-content{
+      grid-area: content2;
+    }
 
 .center-content{
   grid-area: content3;
   justify-self: center;
-    }
+  z-index: 20;
+}
+
 .right-content{
   grid-area: content4;
 }
+
 .Navbar-blank-pic{
   border-radius: 50%;
   grid-area: content5;
@@ -50,22 +56,57 @@
 
 .dropdown-btns {
   margin: auto;
+  z-index: 20;
+  cursor: pointer;
+  display: none;
 }
 
 .Navbar-burger-menu{
   display: none;
-  cursor: pointer;
+  z-index: 20;
 }
-    .Navbar-inner-logout{
-        background-color: rgba(210, 115, 31, 0);
-        width: 100%;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr;
-        grid-template-areas:
-          ". content1 content3 ";
-        grid-gap: 0.2rem;
-        }   
+
+.Navbar-inner .nav-dropdown {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #41c8c8;
+  z-index: 1;
+}
+
+.Navbar-inner .nav-dropdown-hidden {
+  position: fixed;
+  left: 100%;
+}
+
+.Navbar-inner .nav-dropdown .btn {
+  margin-bottom: 10px;
+  width: 150px;
+  height: 50px;
+  color: rgb(0, 0, 0);
+  border: 0;
+}
+
+.Navbar-inner .nav-dropdown ul li,
+.Navbar-inner .nav-dropdown-hidden ul li {
+  list-style: none;
+}
+
+.Navbar-inner-logout{
+    background-color: rgba(210, 115, 31, 0);
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+      ". content1 content3 ";
+    grid-gap: 0.2rem;
+    }   
 
 /* rgb(110, 191, 191); */
 .btn{
@@ -125,7 +166,7 @@ transition: ease 0.5s;
 
   }
 
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 850px) {
 
     .Navbar-inner-logout{
         background-color: rgba(210, 115, 31, 0);
@@ -153,10 +194,7 @@ transition: ease 0.5s;
           place-self: center;
         }
 
-        .left-content{
-          display: none;
-        }
-        .right-content{
+        .left-content , .right-content{
           display: none;
         }
 
@@ -169,6 +207,9 @@ transition: ease 0.5s;
         }
         .Navbar-blank-pic{
           display:none;
+        }
+        .dropdown-btns {
+          display: inline;
         }
 
   }
