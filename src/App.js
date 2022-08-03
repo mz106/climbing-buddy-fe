@@ -5,6 +5,7 @@ import Header from "./components/UI/header/Header";
 import Footer from "./components/UI/footer/Footer";
 
 import LandingPage from "./pages/landingPage/LandingPage";
+import FriendSwipe from "./pages/friendSwipe/FriendSwipe";
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
      
       <Routes>
         <Route path="/" element={<LandingPage />} />
+        <Route path="/friendSwipe" element={<FriendSwipe />} />
       </Routes>
       <Footer />
       <p>The following message is coming from the backend: "{testState}"</p>

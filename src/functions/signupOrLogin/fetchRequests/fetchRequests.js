@@ -27,7 +27,7 @@ export const registerUser = async (userObj, setUser) => {
 
     try {
         // POST /user {userObj} => {userObj, token}
-        const res = await fetch(`${process.env.REACT_APP_REST_API}/user/register`, {
+        const res = await fetch(`${process.env.REACT_APP_BASE_URL}/user/register`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify( userObj ),
@@ -59,7 +59,7 @@ export const loginUser = async (userObj, setUser) => {
     try {
 
         // POST /user/login {username, password} => {userObj, token}
-        const res = await fetch(`${process.env.REACT_APP_REST_API}/user/login`, {
+        const res = await fetch(`${process.env.REACT_APP_BASE_URL}/user/login`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify( userObj ),
