@@ -11,7 +11,7 @@ import { useState } from "react"
 const Navbar = () => {
 
 // const [navBarSwich, setNavBarSwich] = useState (true)
-const navBarSwich = false;
+const navBarSwich = true;
 
 // useState for toggling mobile dropdown
 const [dropdown, setDropdown] = useState(false);
