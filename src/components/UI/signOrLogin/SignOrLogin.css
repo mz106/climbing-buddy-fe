@@ -88,7 +88,9 @@ padding-top: 3px;
   
     font-size: 17px;
 }
-
+.Login-link{
+    cursor: pointer;
+}
 
 .Login-link:after{
     position: absolute;
@@ -99,17 +101,22 @@ padding-top: 3px;
     right: 60px
 }
 
-.Login-link:hover, .Register-btn:hover{
+
+.Login-link-active, .Register-btn-active{
     font-weight: 800;
     cursor: pointer;
-
 }
-.Login-link:hover::after,.Register-btn:hover::after {
+.Login-link-active:after{
+    position: absolute;
+    content: "";
     border-bottom: #000000 solid 3px;
-    
+    width: 100px;
+    bottom: 195px;
+    right: 60px
 }
+
 .Register-btn{
- 
+    cursor: pointer;
 }
 .Register-btn:after{
     position: absolute;
@@ -119,7 +126,17 @@ padding-top: 3px;
     bottom: 195px;
     right: 160px
 }
-
+.Register-btn-active:after{
+    position: absolute;
+    content: "";
+    border-bottom: #000000 solid 3px;
+    width: 120px;
+    bottom: 195px;
+    right: 160px
+}
+.Register-btn-active{
+    cursor: pointer;
+}
 .Login-logo{
     width: 90px;
     height: 90px;

@@ -4,7 +4,19 @@ import "./SignOrLogin.css"
 import { testFunction } from '../../../functions/signupOrLogin/helpers/helpers';
 import loginPic from "./Images/login-pic.png"
 import logo from "../header/navbar/Images/logo.png"
-const SignOrLogin = ({loginToggle, setLoginToggle}) => {
+const SignOrLogin = ({loginToggle, setLoginToggle, registerToggle, setRegisterToggle}) => {
+
+
+const closePage = () =>{
+  // setLoginToggle(false)
+  if (registerToggle === true){
+    setRegisterToggle(false)
+  }
+ if(loginToggle === true){
+  setLoginToggle(false)
+ }
+  
+}
 
   useEffect(() => {
     testFunction();
@@ -19,8 +31,8 @@ const SignOrLogin = ({loginToggle, setLoginToggle}) => {
       <div className='Login-form'>
       <img src={logo} alt="logo" className="Login-logo"/>
       <div className='Login-register-box' >
-      <div className='Register-btn'>Register</div>
-        <div className='Login-link'>Login</div>
+      <div className={registerToggle ? 'Register-btn-active' : "Register-btn"}>Register</div>
+        <div className={loginToggle ? "Login-link-active" : "Login-link"}>Login</div>
        
       </div>
       <input type="text" placeholder='Username' className='Login-username-input' />
@@ -28,7 +40,7 @@ const SignOrLogin = ({loginToggle, setLoginToggle}) => {
       <button className='Login-btn' >LOGIN</button>
       <div className='Forgot-password' >Forgot password?</div>
       </div>
-      <button className='Login-close-btn' onClick={()=>setLoginToggle(!loginToggle)} >X</button>
+      <button className='Login-close-btn' onClick={closePage} >X</button>
       </div>
       
       

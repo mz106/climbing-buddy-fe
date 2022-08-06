@@ -11,6 +11,7 @@ const Navbar = () => {
   // const [navBarSwich, setNavBarSwich] = useState (true)
 const navBarSwich = false;
 const [loginToggle, setLoginToggle]= useState (false)
+const [registerToggle, setRegisterToggle] = useState(false)
   return (
     <div className='Navbar'>
      
@@ -41,11 +42,11 @@ const [loginToggle, setLoginToggle]= useState (false)
       <img className='Navbar-logo-logout' src={logo} alt="logo" height={70} />
      <div className='Navbar-flex Login-register-btns-logout'>
     <button className=' btn' onClick={()=>setLoginToggle(!loginToggle)} >Login</button>
-    <button className=' btn'>Register</button>
+    <button className=' btn' onClick={()=>setRegisterToggle(!registerToggle)}>Register</button>
     </div>
     </div>} 
     {loginToggle ? <SignOrLogin loginToggle={loginToggle} setLoginToggle={setLoginToggle}/> : ""}
-   
+    {registerToggle ? <SignOrLogin registerToggle={registerToggle} setRegisterToggle={setRegisterToggle}/> : ""}
     </div>
    
    
