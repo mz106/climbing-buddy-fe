@@ -57,6 +57,7 @@ width: 25px;
     background: #b25708;
 grid-area: content3;
 place-self: center;
+padding-top: 3px;
 }
 
 .Login-close-btn:hover{
@@ -88,10 +89,8 @@ place-self: center;
     font-size: 17px;
 }
 
-.Login-btn{
-   
-}
-.Login-btn:after{
+
+.Login-link:after{
     position: absolute;
     content: "";
     border-bottom: #000000 solid 2px;
@@ -100,11 +99,12 @@ place-self: center;
     right: 60px
 }
 
-.Login-btn:hover, .Register-btn:hover{
+.Login-link:hover, .Register-btn:hover{
     font-weight: 800;
+    cursor: pointer;
 
 }
-.Login-btn:hover::after,.Register-btn:hover::after {
+.Login-link:hover::after,.Register-btn:hover::after {
     border-bottom: #000000 solid 3px;
     
 }
@@ -129,6 +129,30 @@ place-self: center;
 
 .Login-username-input{
     width: 220px;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
     margin-bottom: 10px;
+}
+input[type=text], input[type=password] {
+    padding-top: 5px;
+  padding-left: 10px;
+    font-size: 10px;
+}
+
+.Login-btn{
+    width: 220px;
+    height: 24px;
+    background-color: #d16d15;
+    border: none;
+    font-weight: 500;
+    color: white;
+    font-size: 14px;
+    font-family: 'Josefin Sans', sans-serif;
+    cursor: pointer;
+    margin-top: 5px;
+    padding-top: 5px;
+}
+
+.Forgot-password{
+    padding-top: 7px;
+    cursor: pointer;
 }

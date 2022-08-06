@@ -20,13 +20,13 @@ const SignOrLogin = ({loginToggle, setLoginToggle}) => {
       <img src={logo} alt="logo" className="Login-logo"/>
       <div className='Login-register-box' >
       <div className='Register-btn'>Register</div>
-        <div className='Login-btn'>Login</div>
+        <div className='Login-link'>Login</div>
        
       </div>
       <input type="text" placeholder='Username' className='Login-username-input' />
       <input type="password" placeholder='Password' className='Login-username-input' />
-      <button>Login</button>
-      <div>Forgot password?</div>
+      <button className='Login-btn' >LOGIN</button>
+      <div className='Forgot-password' >Forgot password?</div>
       </div>
       <button className='Login-close-btn' onClick={()=>setLoginToggle(!loginToggle)} >X</button>
       </div>
