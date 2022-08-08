@@ -1,5 +1,5 @@
 import React from 'react';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import "./SignOrLogin.css"
 import { testFunction } from '../../../functions/signupOrLogin/helpers/helpers';
 import loginPic from "./Images/login-pic.png"
@@ -22,7 +22,7 @@ const closePage = () =>{
 
 
   useEffect(() => {
-
+testFunction()
   }, []);
 
   return (
@@ -37,11 +37,22 @@ const closePage = () =>{
       <div className={loginRegisterToggle.register ? 'Register-btn-active' : "Register-btn"} onClick={()=>{setLoginRegisterToggle({login:false, register: true})}}>Register</div>
         <div className={loginRegisterToggle.login ? "Login-link-active" : "Login-link"} onClick={()=>{setLoginRegisterToggle({login:true, register: false})}}>Login</div>
        
-      </div>
-      <input type="text" placeholder='Username' className='Login-username-input' />
-      <input type="password" placeholder='Password' className='Login-username-input' />
-      <button className='Login-btn' >LOGIN</button>
-      <div className='Forgot-password' >Forgot password?</div>
+      </div>{loginRegisterToggle.register ?
+            <div className='Login-input-position' >
+            <input type="text" placeholder='Username' className='Login-username-input' />
+            <input type="password" placeholder='Password' className='Login-username-input' />
+            <input type="password" placeholder='Password' className='Login-username-input' />
+            <button className='Login-btn' >REGISTER</button>
+            <div className='Forgot-password' >Forgot password?</div>
+            </div> : 
+            
+            <div className='Login-input-position' >
+            <input type="text" placeholder='Username' className='Login-username-input' />
+            <input type="password" placeholder='Password' className='Login-username-input' />
+            <button className='Login-btn' >LOGIN</button>
+            <div className='Forgot-password' >Forgot password?</div>
+            </div>}
+
       </div>
       <button className='Login-close-btn' onClick={closePage} >X</button>
       </div>

@@ -171,3 +171,9 @@ input[type=text], input[type=password] {
     padding-top: 7px;
     cursor: pointer;
 }
+
+.Login-input-position{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
