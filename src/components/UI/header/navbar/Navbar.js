@@ -10,8 +10,12 @@ const Navbar = () => {
 
   // const [navBarSwich, setNavBarSwich] = useState (true)
 const navBarSwich = false;
-const [loginToggle, setLoginToggle]= useState (false)
-const [registerToggle, setRegisterToggle] = useState(false)
+
+const [loginRegisterToggle, setLoginRegisterToggle] = useState({
+  login: false,
+  register: false,
+})
+
   return (
     <div className='Navbar'>
      
@@ -41,12 +45,12 @@ const [registerToggle, setRegisterToggle] = useState(false)
      <div className='Navbar-inner-logout'>      
       <img className='Navbar-logo-logout' src={logo} alt="logo" height={70} />
      <div className='Navbar-flex Login-register-btns-logout'>
-    <button className=' btn' onClick={()=>setLoginToggle(!loginToggle)} >Login</button>
-    <button className=' btn' onClick={()=>setRegisterToggle(!registerToggle)}>Register</button>
+    <button className=' btn' onClick={()=>setLoginRegisterToggle({login:true})} >Login</button>
+    <button className=' btn' onClick={()=>setLoginRegisterToggle({register:true})}>Register</button>
     </div>
     </div>} 
-    {loginToggle ? <SignOrLogin loginToggle={loginToggle} setLoginToggle={setLoginToggle}/> : ""}
-    {registerToggle ? <SignOrLogin registerToggle={registerToggle} setRegisterToggle={setRegisterToggle}/> : ""}
+    {loginRegisterToggle.login ? <SignOrLogin loginRegisterToggle={loginRegisterToggle} setLoginRegisterToggle={setLoginRegisterToggle}/> : ""}
+    {loginRegisterToggle.register ? <SignOrLogin loginRegisterToggle={loginRegisterToggle} setLoginRegisterToggle={setLoginRegisterToggle}/> : ""}
     </div>
    
    

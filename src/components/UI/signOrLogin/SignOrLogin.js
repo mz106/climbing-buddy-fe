@@ -1,25 +1,28 @@
 import React from 'react';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import "./SignOrLogin.css"
 import { testFunction } from '../../../functions/signupOrLogin/helpers/helpers';
 import loginPic from "./Images/login-pic.png"
 import logo from "../header/navbar/Images/logo.png"
-const SignOrLogin = ({loginToggle, setLoginToggle, registerToggle, setRegisterToggle}) => {
+const SignOrLogin = ({loginRegisterToggle, setLoginRegisterToggle}) => {
 
 
 const closePage = () =>{
   // setLoginToggle(false)
-  if (registerToggle === true){
-    setRegisterToggle(false)
+  if (loginRegisterToggle.register === true){
+    setLoginRegisterToggle({register:false})
   }
- if(loginToggle === true){
-  setLoginToggle(false)
- }
+  if (loginRegisterToggle.login === true){
+    setLoginRegisterToggle({login:false})
+  }
   
 }
 
+
+
+
   useEffect(() => {
-    testFunction();
+
   }, []);
 
   return (
@@ -31,8 +34,8 @@ const closePage = () =>{
       <div className='Login-form'>
       <img src={logo} alt="logo" className="Login-logo"/>
       <div className='Login-register-box' >
-      <div className={registerToggle ? 'Register-btn-active' : "Register-btn"}>Register</div>
-        <div className={loginToggle ? "Login-link-active" : "Login-link"}>Login</div>
+      <div className={loginRegisterToggle.register ? 'Register-btn-active' : "Register-btn"} onClick={()=>{setLoginRegisterToggle({login:false, register: true})}}>Register</div>
+        <div className={loginRegisterToggle.login ? "Login-link-active" : "Login-link"} onClick={()=>{setLoginRegisterToggle({login:true, register: false})}}>Login</div>
        
       </div>
       <input type="text" placeholder='Username' className='Login-username-input' />
