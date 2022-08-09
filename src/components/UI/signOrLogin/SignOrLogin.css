@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;1,300;1,400&display=swap');
+:root {
+    --persian-red: #C62C2C;
+    --imperial-red: #ED2938;
+    --dark-orange:#FF8C01;
+    --dark-charcoal:#333333;
+    --black: #000000;
+  }
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+.Login-box{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.753);
+    color: black;
+    backdrop-filter: blur(3px);
+
+}
+
+.Login-inner-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(40, 211, 220);
+    width: 600px;
+    height: 350px;
+    border-radius: 7px;
+    border: solid 3px white;
+    display: grid;
+  
+  grid-template-columns: 0.7fr 1.3fr 35px ;
+  grid-template-rows: 0.1fr 1fr ;
+  grid-template-areas:
+    "content1 content2 content3 "
+    "content1 content2 footer ";
+
+}
+
+.Login-close-btn{
+    color: white;
+    font-size: 17px;
+    font-family: 'Josefin Sans', sans-serif;
+    border: solid white 2px;
+height: 24px;
+width: 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-shadow: 1px 1px #0d0808;
+    background: #b25708;
+grid-area: content3;
+place-self: center;
+padding-top: 3px;
+}
+
+.Login-close-btn:hover{
+    transform: scale(1.2);
+    transition: ease 0.5s;
+}
+.Login-pic{
+    grid-area: content1;
+    border-radius: 5px 0px 0px 5px;
+    border-right: white solid 3px;
+}
+
+.Login-form{ 
+    padding-left: 35px;
+    padding-top: 20px;
+    grid-area: content2;
+    align-items:center;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.Login-register-box{
+    padding: 15px 0px 15px 5px;
+    text-transform: uppercase;
+    display: flex;
+    gap: 25px;
+  
+    font-size: 17px;
+}
+.Login-link, .Register-btn{
+    cursor: pointer;
+}
+
+.Login-link:after{
+    position: absolute;
+    content: "";
+    border-bottom: #000000 solid 2px;
+    width: 100px;
+    bottom: 195px;
+    right: 60px
+}
+
+
+.Login-link-active, .Register-btn-active{
+    font-weight: 800;
+    cursor: pointer;
+}
+.Login-link-active:after{
+    position: absolute;
+    content: "";
+    border-bottom: #000000 solid 3px;
+    width: 100px;
+    bottom: 195px;
+    right: 60px
+}
+
+
+.Register-btn:after{
+    position: absolute;
+    content: "";
+    border-bottom: #000000 solid 2px;
+    width: 120px;
+    bottom: 195px;
+    right: 160px;
+}
+.Register-btn-active:after{
+    position: absolute;
+    content: "";
+    border-bottom: #000000 solid 3px;
+    width: 120px;
+    bottom: 195px;
+    right: 160px
+}
+.Register-btn-active{
+    cursor: pointer;
+}
+.Login-logo{
+    width: 90px;
+    height: 90px;
+    margin-left: 15px;
+}
+  
+
+.Login-username-input{
+    width: 220px;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+input[type=text], input[type=password] {
+    padding-top: 5px;
+  padding-left: 10px;
+    font-size: 10px;
+}
+
+.Login-btn{
+    width: 220px;
+    height: 24px;
+    background-color: #d16d15;
+    border: none;
+    font-weight: 500;
+    color: white;
+    font-size: 14px;
+    font-family: 'Josefin Sans', sans-serif;
+    cursor: pointer;
+    margin-top: 5px;
+    padding-top: 5px;
+}
+
+.Forgot-password{
+    padding-top: 7px;
+    cursor: pointer;
+}
+
+.Login-input-position{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
