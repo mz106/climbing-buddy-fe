@@ -28,9 +28,10 @@
 
 .Navbar-home-icon {
   grid-area: content1;
-  justify-self: center;
   align-self: center;
   z-index: 20;
+  position: relative;
+  left: 5px;
 }
 
 .left-content {
