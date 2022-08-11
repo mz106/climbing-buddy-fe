@@ -1,104 +1,170 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;1,300;1,400&display=swap');
 
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
   }
-  
-.Navbar{
-    background-color: #41c8c8;
-    border-bottom: 2px solid white;
-    height: 75px;
-    display: flex;
-    justify-content:space-around;
-    
+
+
+.Navbar {
+  background-color: #41c8c8;
+  border-bottom: 2px solid white;
+  height: 75px;
+  display: flex;
+  justify-content:space-around;
+  z-index: 99;
 }  
 
-.Navbar-inner{
-    width: 1000px;
-    display: grid;
-    grid-template-columns: 0.5fr 1fr 1fr 1fr 0.5fr;
-    grid-template-rows: 1fr;
-    grid-template-areas:
-      "content1 content2 content3 content4 content5 ";
-    
-    }
-    .Navbar-home-icon{
-      grid-area: content1;
-      justify-self: center;
-      align-self: center;
-    }
-.left-content{
-  grid-area: content2;
- 
+.Navbar-inner {
+  width: 1000px;
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 1fr 1fr 0.5fr;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+    "content1 content2 content3 content4 content5 ";
+  z-index: 15;
 }
 
-.center-content{
+.Navbar-home-icon {
+  grid-area: content1;
+  align-self: center;
+  z-index: 20;
+  position: relative;
+  left: 5px;
+  bottom: 2px;
+}
+
+.left-content {
+  grid-area: content2;
+}
+
+.center-content {
   grid-area: content3;
   justify-self: center;
-    }
-.right-content{
+  z-index: 20;
+}
+
+.right-content {
   grid-area: content4;
 }
-.Navbar-blank-pic{
+
+.Navbar-blank-pic {
   border-radius: 50%;
   grid-area: content5;
-  justify-self: center;
   align-self: center;
+  margin-left: 10px;
 }
-.Navbar-burger-menu{
+
+
+.dropdown-btns {
+  margin: auto;
+  z-index: 20;
+  cursor: pointer;
   display: none;
 }
-    .Navbar-inner-logout{
-        background-color: rgba(210, 115, 31, 0);
-        width: 1000px;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr;
-        grid-template-areas:
-          ". content1 content3 ";
-        grid-gap: 0.2rem;
-        }   
 
-/* rgb(110, 191, 191); */
-.btn{
-    color: white;
-    font-size: 17px;
-    font-family: 'Josefin Sans', sans-serif;
-    border: solid white 2px;
-    padding: 3.5px 6px 2px 6px  ;
-    border-radius: 5px;
-    cursor: pointer;
-    text-shadow: 1px 1px #0d0808;
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-    background: #48e0e0;
-
-
-}
-.btn:hover{
-background-color: #cd8705;
-transition: ease 0.5s;
-
-}
-.Navbar-flex{
-    justify-self: center;
-    display: flex;
-    align-items:center;
-gap: 15px;
-   
-}
-.Login-register-btns-logout{
-    padding-left: 80px;
-    grid-area: content3;
+.Navbar-blank-pic.mobile {
+  display: inline;
+  align-self: center;
+  position: relative;
+  left: 47px;
+  top: 10px;
 }
 
+.Navbar-burger-menu {
+  display: none;
+  z-index: 20;
+}
+
+/* Nav dropdown */
+
+.Navbar-inner .nav-dropdown {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #41c8c8;
+  z-index: 1;
+}
+
+.Navbar-inner .nav-dropdown .ul-dropdown {
+  position: relative;
+  top: 60px;
+}
+
+.Navbar-inner .nav-dropdown-hidden {
+  position: fixed;
+  left: 100%;
+}
+
+.Navbar-inner .nav-dropdown .btn {
+  margin-bottom: 5px;
+  width: 150px;
+  height: 50px;
+  color: rgb(0, 0, 0);
+  border: 0;
+  font-size: 2rem;
+}
+
+.Navbar-inner .nav-dropdown ul li,
+.Navbar-inner .nav-dropdown-hidden ul li {
+  list-style: none;
+}
+
+.Navbar-inner-logout {
+  background-color: rgba(210, 115, 31, 0);
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+    ". content1 content3 ";
+  grid-gap: 0.2rem;
+    }   
 
 
-.Navbar-logo-logout{
+.btn {
+  color: white;
+  font-size: 17px;
+  font-family: 'Josefin Sans', sans-serif;
+  border: solid white 2px;
+  padding: 3px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-shadow: 1px 1px #0d0808;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  background: #48e0e0;
+}
+.btn:hover {
+  background-color: #cd8705;
+  transform: scale(1.1);
+  transition: ease 0.5s;
+}
+
+.Navbar-flex {
+  justify-self: center;
+  display: flex;
+  align-items:center;
+  gap: 15px;
+}
+
+.Login-register-btns-logout {
+  padding-left: 80px;
+  padding-right: 40px;
+  grid-area: content3;
+}
+
+.Navbar-logo-logout {
   grid-area: content1;
   justify-self: center;
 }
+
+/* Media Queries */
 
 @media only screen and (max-width: 1024px) {
     .Navbar-inner-logout{
@@ -109,180 +175,91 @@ gap: 15px;
         grid-template-rows: 1fr;
         grid-template-areas:
           " . content1 content3 ";
-        
-        
-        }  
-    .btn{
-      width: 70px;
-    }
+        }
 
-
+        .btn{
+          width: 70px;
+        }
   }
 
-  @media only screen and (max-width: 768px) {
-    .Navbar-inner-logout{
+  @media only screen and (max-width: 850px) {
+
+    .Navbar-inner-logout {
         background-color: rgba(210, 115, 31, 0);
-        width: 550px;
+        justify-content: center;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr;
         grid-template-areas:
           " . content1 content3 ";
-        
-        }  
+        }
 
-  }
-  @media (min-width:376px) and (max-width:425px) {
-    .Navbar-inner-logout{
-        background-color: rgba(210, 115, 31, 0);
-        width: 320px;
-        display: grid;
-        grid-template-columns:  160px 160px;
-        grid-template-rows: 1fr;
-        grid-template-areas:
-          " content1 content3 ";
-        
-        }  
-        .Navbar-logo-logout{
-padding-left: 0px;
-        }
-        .Login-register-btns-logout{
-            padding-right: 120px;
-        }
-        .Navbar-inner{
-       margin-right: -25px;
-          width: 425px;
+        .Navbar-inner {
+          margin-right: -25px;
           display: grid;
+          justify-content: space-around;
           grid-template-columns:  100px 100px 100px;
           grid-template-rows: 1fr;
           grid-template-areas:
             "content1 content2 content3 ";
-           
           }
 
-    .Navbar-burger-menu{
-      display: inline;
+        .Navbar-burger-menu {
+          display: inline;
+          grid-area: content3;
+          place-self: center;
+        }
+
+        .left-content , .right-content {
+          display: none;
+        }
+
+        .center-content{
+          grid-area: content2;
+          place-self: center;
+        }
+
+        .Navbar-home-icon {
+          grid-area: content1;
+        }
+        
+        .Navbar-blank-pic {
+          display:none;
+        }
+
+        .dropdown-btns, .Navbar-blank-pic.mobile {
+          display: inline;
+        }
+
+        .ul-dropdown .Navbar-blank-pic.mobile {
+          margin-top: 10px;
+        }
+
+        @media (max-width: 350px) {
+          .Login-register-btns-logout {
+            padding-left: 40px;
+          }
+        }
+  }
+
+  @media (orientation: landscape) {
+
+    .Navbar-inner .nav-dropdown .btn {
+      transform: scale(.5);
+      margin: 0;
     }
 
-.left-content{
-  display: none;
-}
-.right-content{
-  display: none;
-}
-.center-content{
-  grid-area: content2;
-  place-self: center;
-}
-.Navbar-home-icon{
-  grid-area: content1;
-}
-.Navbar-burger-menu{
-  grid-area: content3;
-  place-self: center;
-}
-.Navbar-blank-pic{
-  display:none;
-}
-
-  }
-  @media (min-width:321px) and (max-width:375px) {
-
-
-    .Navbar-inner{
-margin-left: -60px;
-      width: 320px;
-      display: grid;
-      grid-template-columns:  1fr 1fr 1fr;
-      grid-template-rows: 1fr;
-      grid-template-areas:
-        "content1 content2 content3 ";
-       
-      }
-
-.left-content{
-display: none;
-}
-.right-content{
-display: none;
-place-self: center;
-
-}
-.center-content{
-grid-area: content2;
-place-self: center;
-}
-.Navbar-home-icon{
-grid-area: content1;
-justify-self: center;
-
-}
-.Navbar-burger-menu{
-grid-area: content3;
-place-self: center;
-display: inline;
-
-}
-.Navbar-blank-pic{
-display:none;
-}
-  }
-
-
-
-  @media only screen and (max-width: 320px) {
-    .Navbar-inner-logout{
-        background-color: rgba(210, 115, 31, 0);
-        width: 320px;
-        display: grid;
-        grid-template-columns:  160px 160px;
-        grid-template-rows: 1fr;
-        grid-template-areas:
-          " content1 content3 ";
-        
-        }  
-        .Navbar-logo-logout{
-padding-left: 00px;
-        }
-        .Login-register-btns-logout{
-            padding-right: 170px;
-        }
-
-
-
-        .Navbar-inner{
-      
-          width: 300px;
-          display: grid;
-          grid-template-columns:  100px 100px 100px;
-          grid-template-rows: 1fr;
-          grid-template-areas:
-            "content1 content2 content3 ";
-          
-          }
-
-.left-content{
-  display: none;
-}
-.right-content{
-  display: none;
-}
-.center-content{
-  grid-area: content2;
-  place-self: center;
-}
-.Navbar-home-icon{
-  grid-area: content1;
-  justify-self: center;
-
-}
-.Navbar-burger-menu{
-  grid-area: content3;
-  place-self: center;
-  display: inline;
-  
-}
-.Navbar-blank-pic{
-  display:none;
-}
+    .Navbar-inner .nav-dropdown .ul-dropdown {
+      display: flex;
+      top: 0;
+    }
+    .ul-dropdown li {
+      width: 80px;
+      height: 60px;
+    }
+    .Navbar-blank-pic.mobile {
+      position: absolute;
+      left: 50%;
+      top: 80px;
+    }
   }
