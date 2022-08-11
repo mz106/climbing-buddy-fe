@@ -32,6 +32,7 @@
   z-index: 20;
   position: relative;
   left: 5px;
+  bottom: 2px;
 }
 
 .left-content {
